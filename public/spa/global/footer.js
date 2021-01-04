@@ -76,7 +76,7 @@ function create_fragment(ctx) {
 	let a9;
 	let t24;
 	let t25;
-	let p;
+	let p0;
 	let t26;
 	let t27;
 	let ul3;
@@ -89,10 +89,13 @@ function create_fragment(ctx) {
 	let i1;
 	let t29;
 	let div8;
+	let p1;
 	let small;
 	let t30;
 	let a12;
 	let t31;
+	let br;
+	let t32;
 
 	return {
 		c() {
@@ -154,7 +157,7 @@ function create_fragment(ctx) {
 			a9 = element("a");
 			t24 = text("JM Lauranson");
 			t25 = space();
-			p = element("p");
+			p0 = element("p");
 			t26 = text("Digital solutions to solve problems");
 			t27 = space();
 			ul3 = element("ul");
@@ -167,10 +170,13 @@ function create_fragment(ctx) {
 			i1 = element("i");
 			t29 = space();
 			div8 = element("div");
+			p1 = element("p");
 			small = element("small");
-			t30 = text("Design and development By\n        ");
+			t30 = text("Design and development by\n        ");
 			a12 = element("a");
 			t31 = text("JM Lauranson");
+			br = element("br");
+			t32 = text("\n        All rights reserved");
 			this.h();
 		},
 		l(nodes) {
@@ -292,10 +298,10 @@ function create_fragment(ctx) {
 			t24 = claim_text(a9_nodes, "JM Lauranson");
 			a9_nodes.forEach(detach);
 			t25 = claim_space(div6_nodes);
-			p = claim_element(div6_nodes, "P", { class: true });
-			var p_nodes = children(p);
-			t26 = claim_text(p_nodes, "Digital solutions to solve problems");
-			p_nodes.forEach(detach);
+			p0 = claim_element(div6_nodes, "P", { class: true });
+			var p0_nodes = children(p0);
+			t26 = claim_text(p0_nodes, "Digital solutions to solve problems");
+			p0_nodes.forEach(detach);
 			t27 = claim_space(div6_nodes);
 			ul3 = claim_element(div6_nodes, "UL", { class: true });
 			var ul3_nodes = children(ul3);
@@ -322,14 +328,19 @@ function create_fragment(ctx) {
 			t29 = claim_space(div9_nodes);
 			div8 = claim_element(div9_nodes, "DIV", { class: true });
 			var div8_nodes = children(div8);
-			small = claim_element(div8_nodes, "SMALL", { class: true });
+			p1 = claim_element(div8_nodes, "P", {});
+			var p1_nodes = children(p1);
+			small = claim_element(p1_nodes, "SMALL", { class: true });
 			var small_nodes = children(small);
-			t30 = claim_text(small_nodes, "Design and development By\n        ");
+			t30 = claim_text(small_nodes, "Design and development by\n        ");
 			a12 = claim_element(small_nodes, "A", { href: true });
 			var a12_nodes = children(a12);
 			t31 = claim_text(a12_nodes, "JM Lauranson");
 			a12_nodes.forEach(detach);
+			br = claim_element(small_nodes, "BR", {});
+			t32 = claim_text(small_nodes, "\n        All rights reserved");
 			small_nodes.forEach(detach);
+			p1_nodes.forEach(detach);
 			div8_nodes.forEach(detach);
 			div9_nodes.forEach(detach);
 			footer_nodes.forEach(detach);
@@ -356,7 +367,7 @@ function create_fragment(ctx) {
 			attr(div5, "class", "col-md-3 col-sm-6 mb-5");
 			attr(a9, "class", "d-block mb-3");
 			attr(a9, "href", "/");
-			attr(p, "class", "mb-4");
+			attr(p0, "class", "mb-4");
 			attr(i0, "class", "ti-twitter-alt");
 			attr(a10, "href", "https://twitter.com/jmlauranson");
 			attr(li9, "class", "list-inline-item");
@@ -366,11 +377,11 @@ function create_fragment(ctx) {
 			attr(ul3, "class", "list-inline social-icons");
 			attr(div6, "class", "col-md-3 col-sm-6 mb-5");
 			attr(div7, "class", "row");
-			attr(a12, "href", "https://jm.lauranson.com/");
+			attr(a12, "href", "https://jm.lauranson.com/about");
 			attr(small, "class", "content");
 			attr(div8, "class", "border-top border-default text-center py-4 mt-4");
 			attr(div9, "class", "container");
-			attr(footer, "class", "bg-light section pb-0 mt-5");
+			attr(footer, "class", "bg-light section pb-0 mt-5 border-top");
 			attr(footer, "id", "footer");
 		},
 		m(target, anchor) {
@@ -432,8 +443,8 @@ function create_fragment(ctx) {
 			append(div6, a9);
 			append(a9, t24);
 			append(div6, t25);
-			append(div6, p);
-			append(p, t26);
+			append(div6, p0);
+			append(p0, t26);
 			append(div6, t27);
 			append(div6, ul3);
 			append(ul3, li9);
@@ -445,10 +456,13 @@ function create_fragment(ctx) {
 			append(a11, i1);
 			append(div9, t29);
 			append(div9, div8);
-			append(div8, small);
+			append(div8, p1);
+			append(p1, small);
 			append(small, t30);
 			append(small, a12);
 			append(a12, t31);
+			append(small, br);
+			append(small, t32);
 		},
 		p: noop,
 		i: noop,

@@ -1,4 +1,4 @@
-<footer class="bg-light section pb-0 mt-5" id="footer">
+<footer class="bg-light section pb-0 mt-5 border-top" id="footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3 col-sm-6 mb-5">
@@ -44,9 +44,11 @@
 			</div>
 		</div>
 		<div class="border-top border-default text-center py-4 mt-4">
-			<small class="content">Design and development By
-        <a href="https://jm.lauranson.com/">JM Lauranson</a>
-      </small>
+			<p>
+        <small class="content">Design and development by
+        <a href="https://jm.lauranson.com/about">JM Lauranson</a><br>
+        All rights reserved</small>      
+    </p>
 		</div>
 	</div>
 </footer>

@@ -58,7 +58,7 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			section = claim_element(nodes, "SECTION", { class: true });
+			section = claim_element(nodes, "SECTION", { class: true, id: true });
 			var section_nodes = children(section);
 			div3 = claim_element(section_nodes, "DIV", { class: true });
 			var div3_nodes = children(div3);
@@ -110,7 +110,8 @@ function create_fragment(ctx) {
 			attr(div1, "class", "col-lg-10 mx-auto text-center");
 			attr(div2, "class", "row");
 			attr(div3, "class", "container");
-			attr(section, "class", "banner mt-5");
+			attr(section, "class", "banner mt-5 svelte-1wc2sdt");
+			attr(section, "id", "hero");
 		},
 		m(target, anchor) {
 			insert(target, section, anchor);

@@ -25,7 +25,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (11:3) {#each items as item}
+// (35:3) {#each items as item}
 function create_each_block(ctx) {
 	let div1;
 	let div0;
@@ -78,9 +78,9 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(i, "class", i_class_value = "" + (/*item*/ ctx[2].icon + " mb-3"));
+			attr(i, "class", i_class_value = "" + (/*item*/ ctx[2].icon + " mb-3" + " svelte-1uplq5h"));
 			attr(h4, "class", "mb-2");
-			attr(div0, "class", "feature-card text-center");
+			attr(div0, "class", "feature-card text-center svelte-1uplq5h");
 			attr(div1, "class", "col-md-4 col-sm-6 mb-4");
 		},
 		m(target, anchor) {
@@ -96,7 +96,7 @@ function create_each_block(ctx) {
 			append(div1, t4);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*items*/ 2 && i_class_value !== (i_class_value = "" + (/*item*/ ctx[2].icon + " mb-3"))) {
+			if (dirty & /*items*/ 2 && i_class_value !== (i_class_value = "" + (/*item*/ ctx[2].icon + " mb-3" + " svelte-1uplq5h"))) {
 				attr(i, "class", i_class_value);
 			}
 
@@ -166,7 +166,7 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "section-title");
+			attr(h2, "class", "section-title svelte-1uplq5h");
 			attr(div0, "class", "col-12 text-center");
 			attr(div1, "class", "row justify-content-center");
 			attr(div2, "class", "container");

@@ -17,6 +17,9 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
 		rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=SourceSerifPro:wght@700&display=swap"
+		rel="stylesheet" />
 	<link rel="stylesheet" href="assets/themify-icons/themify-icons.css" />
 	<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 	<link rel="stylesheet" href="/spa/bundle.css" />

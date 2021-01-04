@@ -18,55 +18,107 @@ import {
 } from '/spa/web_modules/svelte/internal/index.js';
 
 function create_fragment(ctx) {
+	let header;
+	let div1;
 	let nav;
 	let a0;
+	let img;
+	let img_src_value;
 	let t0;
 	let t1;
 	let button;
-	let i;
+	let i0;
 	let t2;
-	let div;
+	let div0;
 	let ul;
 	let li0;
 	let a1;
+	let i1;
+	let br0;
 	let t3;
 	let t4;
 	let li1;
 	let a2;
+	let i2;
+	let br1;
 	let t5;
 	let t6;
+	let li2;
 	let a3;
+	let i3;
+	let br2;
 	let t7;
+	let t8;
+	let li3;
+	let a4;
+	let i4;
+	let br3;
+	let t9;
+	let t10;
+	let a5;
+	let t11;
 
 	return {
 		c() {
+			header = element("header");
+			div1 = element("div");
 			nav = element("nav");
 			a0 = element("a");
-			t0 = text("JM Lauranson");
+			img = element("img");
+			t0 = text("\n\t\t\t\tJM Lauranson");
 			t1 = space();
 			button = element("button");
-			i = element("i");
+			i0 = element("i");
 			t2 = space();
-			div = element("div");
+			div0 = element("div");
 			ul = element("ul");
 			li0 = element("li");
 			a1 = element("a");
-			t3 = text("Services");
+			i1 = element("i");
+			br0 = element("br");
+			t3 = text("\n\t\t\t\t\t\t\tHome");
 			t4 = space();
 			li1 = element("li");
 			a2 = element("a");
-			t5 = text("About");
+			i2 = element("i");
+			br1 = element("br");
+			t5 = text("\n\t\t\t\t\t\t\tServices");
 			t6 = space();
+			li2 = element("li");
 			a3 = element("a");
-			t7 = text("Email Me");
+			i3 = element("i");
+			br2 = element("br");
+			t7 = text("\n\t\t\t\t\t\t\tAbout");
+			t8 = space();
+			li3 = element("li");
+			a4 = element("a");
+			i4 = element("i");
+			br3 = element("br");
+			t9 = text("\n\t\t\t\t\t\t\tBlog");
+			t10 = space();
+			a5 = element("a");
+			t11 = text("Contact Me");
 			this.h();
 		},
 		l(nodes) {
-			nav = claim_element(nodes, "NAV", { class: true });
+			header = claim_element(nodes, "HEADER", { class: true });
+			var header_nodes = children(header);
+			div1 = claim_element(header_nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			nav = claim_element(div1_nodes, "NAV", { class: true });
 			var nav_nodes = children(nav);
 			a0 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a0_nodes = children(a0);
-			t0 = claim_text(a0_nodes, "JM Lauranson");
+
+			img = claim_element(a0_nodes, "IMG", {
+				src: true,
+				alt: true,
+				width: true,
+				height: true,
+				class: true
+			});
+
+			t0 = claim_text(a0_nodes, "\n\t\t\t\tJM Lauranson");
 			a0_nodes.forEach(detach);
 			t1 = claim_space(nav_nodes);
 
@@ -78,19 +130,22 @@ function create_fragment(ctx) {
 			});
 
 			var button_nodes = children(button);
-			i = claim_element(button_nodes, "I", { class: true });
-			children(i).forEach(detach);
+			i0 = claim_element(button_nodes, "I", { class: true });
+			children(i0).forEach(detach);
 			button_nodes.forEach(detach);
 			t2 = claim_space(nav_nodes);
-			div = claim_element(nav_nodes, "DIV", { class: true, id: true });
-			var div_nodes = children(div);
-			ul = claim_element(div_nodes, "UL", { class: true });
+			div0 = claim_element(nav_nodes, "DIV", { class: true, id: true });
+			var div0_nodes = children(div0);
+			ul = claim_element(div0_nodes, "UL", { class: true });
 			var ul_nodes = children(ul);
 			li0 = claim_element(ul_nodes, "LI", { class: true });
 			var li0_nodes = children(li0);
 			a1 = claim_element(li0_nodes, "A", { class: true, href: true });
 			var a1_nodes = children(a1);
-			t3 = claim_text(a1_nodes, "Services");
+			i1 = claim_element(a1_nodes, "I", { class: true });
+			children(i1).forEach(detach);
+			br0 = claim_element(a1_nodes, "BR", {});
+			t3 = claim_text(a1_nodes, "\n\t\t\t\t\t\t\tHome");
 			a1_nodes.forEach(detach);
 			li0_nodes.forEach(detach);
 			t4 = claim_space(ul_nodes);
@@ -98,66 +153,129 @@ function create_fragment(ctx) {
 			var li1_nodes = children(li1);
 			a2 = claim_element(li1_nodes, "A", { class: true, href: true });
 			var a2_nodes = children(a2);
-			t5 = claim_text(a2_nodes, "About");
+			i2 = claim_element(a2_nodes, "I", { class: true });
+			children(i2).forEach(detach);
+			br1 = claim_element(a2_nodes, "BR", {});
+			t5 = claim_text(a2_nodes, "\n\t\t\t\t\t\t\tServices");
 			a2_nodes.forEach(detach);
 			li1_nodes.forEach(detach);
-			ul_nodes.forEach(detach);
-			t6 = claim_space(div_nodes);
-			a3 = claim_element(div_nodes, "A", { href: true, class: true });
+			t6 = claim_space(ul_nodes);
+			li2 = claim_element(ul_nodes, "LI", { class: true });
+			var li2_nodes = children(li2);
+			a3 = claim_element(li2_nodes, "A", { class: true, href: true });
 			var a3_nodes = children(a3);
-			t7 = claim_text(a3_nodes, "Email Me");
+			i3 = claim_element(a3_nodes, "I", { class: true });
+			children(i3).forEach(detach);
+			br2 = claim_element(a3_nodes, "BR", {});
+			t7 = claim_text(a3_nodes, "\n\t\t\t\t\t\t\tAbout");
 			a3_nodes.forEach(detach);
-			div_nodes.forEach(detach);
+			li2_nodes.forEach(detach);
+			t8 = claim_space(ul_nodes);
+			li3 = claim_element(ul_nodes, "LI", { class: true });
+			var li3_nodes = children(li3);
+			a4 = claim_element(li3_nodes, "A", { class: true, href: true });
+			var a4_nodes = children(a4);
+			i4 = claim_element(a4_nodes, "I", { class: true });
+			children(i4).forEach(detach);
+			br3 = claim_element(a4_nodes, "BR", {});
+			t9 = claim_text(a4_nodes, "\n\t\t\t\t\t\t\tBlog");
+			a4_nodes.forEach(detach);
+			li3_nodes.forEach(detach);
+			ul_nodes.forEach(detach);
+			t10 = claim_space(div0_nodes);
+			a5 = claim_element(div0_nodes, "A", { href: true, class: true });
+			var a5_nodes = children(a5);
+			t11 = claim_text(a5_nodes, "Contact Me");
+			a5_nodes.forEach(detach);
+			div0_nodes.forEach(detach);
 			nav_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			header_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
+			if (img.src !== (img_src_value = "/assets/jimicon.svg")) attr(img, "src", img_src_value);
+			attr(img, "alt", "");
+			attr(img, "width", "30");
+			attr(img, "height", "24");
+			attr(img, "class", "d-inline-block align-top");
 			attr(a0, "class", "navbar-brand");
 			attr(a0, "href", "/");
-			attr(i, "class", "ti-menu h3");
+			attr(i0, "class", "ti-menu h3");
 			attr(button, "class", "navbar-toggler border-0");
 			attr(button, "type", "button");
 			attr(button, "data-toggle", "collapse");
 			attr(button, "data-target", "#navigation");
+			attr(i1, "class", "ti ti-home icon-color");
 			attr(a1, "class", "nav-link");
-			attr(a1, "href", "#services");
+			attr(a1, "href", "/");
 			attr(li0, "class", "nav-item");
+			attr(i2, "class", "ti ti-package icon-color");
 			attr(a2, "class", "nav-link");
-			attr(a2, "href", "#about");
+			attr(a2, "href", "#services");
 			attr(li1, "class", "nav-item");
+			attr(i3, "class", "ti ti-id-badge icon-color");
+			attr(a3, "class", "nav-link");
+			attr(a3, "href", "/about");
+			attr(li2, "class", "nav-item");
+			attr(i4, "class", "ti ti-world icon-color");
+			attr(a4, "class", "nav-link");
+			attr(a4, "href", "/blog");
+			attr(li3, "class", "nav-item");
 			attr(ul, "class", "navbar-nav mx-auto");
-			attr(a3, "href", "mailto:jm@lauranson.com");
-			attr(a3, "class", "btn btn-sm btn-primary ml-3");
-			attr(div, "class", "collapse navbar-collapse text-center");
-			attr(div, "id", "navigation");
+			attr(a5, "href", "/docs");
+			attr(a5, "class", "btn btn-sm btn-primary ml-3");
+			attr(div0, "class", "collapse navbar-collapse text-center");
+			attr(div0, "id", "navigation");
 			attr(nav, "class", "navbar navbar-expand-lg navbar-light bg-transparent");
+			attr(div1, "class", "container");
+			attr(header, "class", "navigation");
 		},
 		m(target, anchor) {
-			insert(target, nav, anchor);
+			insert(target, header, anchor);
+			append(header, div1);
+			append(div1, nav);
 			append(nav, a0);
+			append(a0, img);
 			append(a0, t0);
 			append(nav, t1);
 			append(nav, button);
-			append(button, i);
+			append(button, i0);
 			append(nav, t2);
-			append(nav, div);
-			append(div, ul);
+			append(nav, div0);
+			append(div0, ul);
 			append(ul, li0);
 			append(li0, a1);
+			append(a1, i1);
+			append(a1, br0);
 			append(a1, t3);
 			append(ul, t4);
 			append(ul, li1);
 			append(li1, a2);
+			append(a2, i2);
+			append(a2, br1);
 			append(a2, t5);
-			append(div, t6);
-			append(div, a3);
+			append(ul, t6);
+			append(ul, li2);
+			append(li2, a3);
+			append(a3, i3);
+			append(a3, br2);
 			append(a3, t7);
+			append(ul, t8);
+			append(ul, li3);
+			append(li3, a4);
+			append(a4, i4);
+			append(a4, br3);
+			append(a4, t9);
+			append(div0, t10);
+			append(div0, a5);
+			append(a5, t11);
 		},
 		p: noop,
 		i: noop,
 		o: noop,
 		d(detaching) {
-			if (detaching) detach(nav);
+			if (detaching) detach(header);
 		}
 	};
 }

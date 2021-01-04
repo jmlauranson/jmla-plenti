@@ -4,9 +4,9 @@
       "name": "hero",
       "fields": {
         "title": "Digital solutions to solve problems",
-        "body": "",
+        "body": "Something You Need To Know",
         "link": {
-          "title": "Get Started",
+          "title": "Discover",
           "url": "/#services"
         },
         "image": "/banner-art.svg"
@@ -15,7 +15,7 @@
     {
       "name": "grid",
       "fields": {
-        "title": "",
+        "title": "Services",
         "items": [
           {
             "icon": "ti-cloud-up",
@@ -33,20 +33,6 @@
             "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit quam nihil"
           }
         ]
-      }
-    },
-    {
-      "name": "image_text_block",
-      "fields": {
-        "title": "I'm Jean-Marie an IT Consultant based in Vienna, Austria",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus.",
-        "link": {
-          "title": "Contact Me",
-          "url": "/#contact"
-        },
-        "image": {
-          "position": ""
-        }
       }
     }
   ]

@@ -38,6 +38,8 @@ function create_fragment(ctx) {
 	let link4;
 	let t8;
 	let link5;
+	let t9;
+	let link6;
 
 	return {
 		c() {
@@ -60,6 +62,8 @@ function create_fragment(ctx) {
 			link4 = element("link");
 			t8 = space();
 			link5 = element("link");
+			t9 = space();
+			link6 = element("link");
 			this.h();
 		},
 		l(nodes) {
@@ -87,11 +91,13 @@ function create_fragment(ctx) {
 			t5 = claim_space(head_nodes);
 			link2 = claim_element(head_nodes, "LINK", { href: true, rel: true });
 			t6 = claim_space(head_nodes);
-			link3 = claim_element(head_nodes, "LINK", { rel: true, href: true });
+			link3 = claim_element(head_nodes, "LINK", { href: true, rel: true });
 			t7 = claim_space(head_nodes);
-			link4 = claim_element(head_nodes, "LINK", { rel: true, type: true, href: true });
+			link4 = claim_element(head_nodes, "LINK", { rel: true, href: true });
 			t8 = claim_space(head_nodes);
-			link5 = claim_element(head_nodes, "LINK", { rel: true, href: true });
+			link5 = claim_element(head_nodes, "LINK", { rel: true, type: true, href: true });
+			t9 = claim_space(head_nodes);
+			link6 = claim_element(head_nodes, "LINK", { rel: true, href: true });
 			head_nodes.forEach(detach);
 			this.h();
 		},
@@ -107,13 +113,15 @@ function create_fragment(ctx) {
 			attr(link1, "href", "https://fonts.gstatic.com");
 			attr(link2, "href", "https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
 			attr(link2, "rel", "stylesheet");
+			attr(link3, "href", "https://fonts.googleapis.com/css2?family=SourceSerifPro:wght@700&display=swap");
 			attr(link3, "rel", "stylesheet");
-			attr(link3, "href", "assets/themify-icons/themify-icons.css");
-			attr(link4, "rel", "icon");
-			attr(link4, "type", "image/svg+xml");
-			attr(link4, "href", "/assets/favicon.svg");
-			attr(link5, "rel", "stylesheet");
-			attr(link5, "href", "/spa/bundle.css");
+			attr(link4, "rel", "stylesheet");
+			attr(link4, "href", "assets/themify-icons/themify-icons.css");
+			attr(link5, "rel", "icon");
+			attr(link5, "type", "image/svg+xml");
+			attr(link5, "href", "/assets/favicon.svg");
+			attr(link6, "rel", "stylesheet");
+			attr(link6, "href", "/spa/bundle.css");
 		},
 		m(target, anchor) {
 			insert(target, head, anchor);
@@ -135,6 +143,8 @@ function create_fragment(ctx) {
 			append(head, link4);
 			append(head, t8);
 			append(head, link5);
+			append(head, t9);
+			append(head, link6);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*title*/ 1) set_data(t2, /*title*/ ctx[0]);

@@ -34,8 +34,6 @@ function create_fragment(ctx) {
 	let head;
 	let t0;
 	let body;
-	let header;
-	let div;
 	let nav;
 	let t1;
 	let switch_instance;
@@ -73,8 +71,6 @@ function create_fragment(ctx) {
 			create_component(head.$$.fragment);
 			t0 = space();
 			body = element("body");
-			header = element("header");
-			div = element("div");
 			create_component(nav.$$.fragment);
 			t1 = space();
 			if (switch_instance) create_component(switch_instance.$$.fragment);
@@ -89,24 +85,16 @@ function create_fragment(ctx) {
 			t0 = claim_space(html_nodes);
 			body = claim_element(html_nodes, "BODY", {});
 			var body_nodes = children(body);
-			header = claim_element(body_nodes, "HEADER", { class: true });
-			var header_nodes = children(header);
-			div = claim_element(header_nodes, "DIV", { class: true });
-			var div_nodes = children(div);
-			claim_component(nav.$$.fragment, div_nodes);
-			div_nodes.forEach(detach);
-			t1 = claim_space(header_nodes);
-			if (switch_instance) claim_component(switch_instance.$$.fragment, header_nodes);
-			t2 = claim_space(header_nodes);
-			claim_component(footer.$$.fragment, header_nodes);
-			header_nodes.forEach(detach);
+			claim_component(nav.$$.fragment, body_nodes);
+			t1 = claim_space(body_nodes);
+			if (switch_instance) claim_component(switch_instance.$$.fragment, body_nodes);
+			t2 = claim_space(body_nodes);
+			claim_component(footer.$$.fragment, body_nodes);
 			body_nodes.forEach(detach);
 			html_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(div, "class", "container");
-			attr(header, "class", "navigation");
 			attr(html, "lang", "en");
 		},
 		m(target, anchor) {
@@ -114,17 +102,15 @@ function create_fragment(ctx) {
 			mount_component(head, html, null);
 			append(html, t0);
 			append(html, body);
-			append(body, header);
-			append(header, div);
-			mount_component(nav, div, null);
-			append(header, t1);
+			mount_component(nav, body, null);
+			append(body, t1);
 
 			if (switch_instance) {
-				mount_component(switch_instance, header, null);
+				mount_component(switch_instance, body, null);
 			}
 
-			append(header, t2);
-			mount_component(footer, header, null);
+			append(body, t2);
+			mount_component(footer, body, null);
 			current = true;
 		},
 		p(ctx, [dirty]) {
@@ -155,7 +141,7 @@ function create_fragment(ctx) {
 					switch_instance = new switch_value(switch_props(ctx));
 					create_component(switch_instance.$$.fragment);
 					transition_in(switch_instance.$$.fragment, 1);
-					mount_component(switch_instance, header, t2);
+					mount_component(switch_instance, body, t2);
 				} else {
 					switch_instance = null;
 				}
